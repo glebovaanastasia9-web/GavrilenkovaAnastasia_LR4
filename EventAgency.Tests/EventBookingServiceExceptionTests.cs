@@ -96,12 +96,7 @@ namespace EventAgency.Tests
             Assert.ThrowsException<BookingAlreadyCancelledException>(() => service.CancelBooking(booking.Id));
         }
 
-        /// <summary>
-        /// Явная демонстрация блока try-catch-finally: исключение
-        /// перехватывается в catch, а finally выполняется в любом случае
-        /// (в том числе при выброшенном исключении), что и проверяется
-        /// флагом finallyExecuted.
-        /// </summary>
+        /// <summary> </summary>
         [TestMethod]
         public void BookSeats_TryCatchFinally_Demonstration()
         {
@@ -112,7 +107,7 @@ namespace EventAgency.Tests
 
             try
             {
-                service.BookSeats("ev1", "Клиент", 100); // заведомо больше вместимости
+                service.BookSeats("ev1", "Клиент", 100);
             }
             catch (NotEnoughSeatsException)
             {
