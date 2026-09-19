@@ -47,7 +47,7 @@ namespace EventAgency.Core.Services
 
         public Booking BookSeats(string eventId, string clientName, int guestCount)
         {
-            AgencyEvent agencyEvent = GetEventById(eventId); // бросит EventNotFoundException, если события нет
+            AgencyEvent agencyEvent = GetEventById(eventId);
 
             if (agencyEvent.IsCancelled)
                 throw new EventCancelledException(agencyEvent.Title);
@@ -80,7 +80,7 @@ namespace EventAgency.Core.Services
 
         public List<Booking> GetBookingsForEvent(string eventId)
         {
-            GetEventById(eventId); // проверяет, что мероприятие существует
+            GetEventById(eventId);
 
             return bookings.Values
                 .Where(b => b.EventId == eventId && !b.IsCancelled)
