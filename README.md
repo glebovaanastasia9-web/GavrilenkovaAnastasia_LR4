@@ -33,10 +33,10 @@ EventAgency.sln
 
 ## Модули и их назначение
 
-- **Models** — сущности предметной области, не зависят от других модулей.
-- **Services** — интерфейс `IEventBookingService` и его реализация `EventBookingService`; при нарушении входных условий выбрасывает собственные исключения из `Exceptions`.
-- **Exceptions** — иерархия из семи классов с общим абстрактным предком `EventAgencyException : Exception`, что позволяет перехватывать все ошибки библиотеки одним `catch (EventAgencyException)`.
-- **EventAgency.Tests** — интегрирующий проект: подключается к `EventAgency.Core` через ссылку на проект и обращается к сервису только через интерфейс `IEventBookingService`, не зная деталей его реализации.
+- **Models** – сущности предметной области, не зависят от других модулей.
+- **Services** – интерфейс `IEventBookingService` и его реализация `EventBookingService`; при нарушении входных условий выбрасывает собственные исключения из `Exceptions`.
+- **Exceptions** – иерархия из семи классов с общим абстрактным предком `EventAgencyException : Exception`, что позволяет перехватывать все ошибки библиотеки одним `catch (EventAgencyException)`.
+- **EventAgency.Tests** – интегрирующий проект: подключается к `EventAgency.Core` через ссылку на проект и обращается к сервису только через интерфейс `IEventBookingService`, не зная деталей его реализации.
 
 ## Сборка и запуск тестов
 
